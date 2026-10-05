@@ -1,0 +1,6 @@
+{
+  "name": "Story Real A - Modern News Blogger Theme",
+  "description": "Elite, high-converting news template and live preview studio for Story Real A (storyreala.blogspot.com) featuring modern Indian broadsheet typography, 70/30 grid layout, and AdSense integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

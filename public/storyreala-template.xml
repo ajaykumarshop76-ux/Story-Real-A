@@ -1,0 +1,1564 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsversion='3' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <meta charset='utf-8'/>
+  <meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport'/>
+  <title><data:view.title.escaped/></title>
+  
+  <!-- Blogger Essential Head Tags -->
+  <b:include data='blog' name='all-head-content'/>
+  
+  <!-- Google Fonts: Merriweather for Headings & Inter for Body -->
+  <link href='https://fonts.googleapis.com' rel='preconnect'/>
+  <link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&amp;family=Playfair+Display:ital,wght@0,700;0,800;1,700&amp;display=swap' rel='stylesheet'/>
+
+  <!-- Google AdSense Script (Story Real A - ca-pub-2790193514099157) -->
+  <script async='async' crossorigin='anonymous' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2790193514099157'></script>
+
+  <!-- Canonical & Favicon -->
+  <link expr:href='data:blog.url.canonical' rel='canonical'/>
+
+  <b:skin><![CDATA[
+  /* ==========================================================================
+     STORY REAL A - MODERN BROADSHEET BLOGGER THEME
+     Owner: Ajay Kumar (mmcrajay@gmail.com)
+     Publisher: storyreala.blogspot.com
+     AdSense Client: ca-pub-2790193514099157
+     Design Inspired by The Hindu, Indian Express & NDTV
+     ========================================================================== */
+
+  :root {
+    --primary-red: #c91414;
+    --primary-red-hover: #a30e0e;
+    --text-dark: #111827;
+    --text-body: #222222;
+    --text-muted: #555555;
+    --border-light: #e5e7eb;
+    --border-dark: #111827;
+    --bg-light: #f8fafc;
+    --bg-white: #ffffff;
+    --font-heading: 'Merriweather', 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  /* Reset & Box Sizing */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    background-color: #f4f5f7;
+    color: var(--text-body);
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
+  }
+  a:hover {
+    color: var(--primary-red);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* --------------------------------------------------------------------------
+     1. CONTAINER & BALANCED 70/30 GRID SYSTEM
+     -------------------------------------------------------------------------- */
+  .site-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .main-layout-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+  }
+
+  .main-column {
+    flex: 0 0 calc(70% - 15px);
+    width: calc(70% - 15px);
+    max-width: calc(70% - 15px);
+    box-sizing: border-box;
+  }
+
+  .sidebar-column {
+    flex: 0 0 calc(30% - 15px);
+    width: calc(30% - 15px);
+    max-width: calc(30% - 15px);
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 991px) {
+    .main-column,
+    .sidebar-column {
+      flex: 0 0 100%;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  /* --------------------------------------------------------------------------
+     TOP BAR & BREAKING NEWS TICKER
+     -------------------------------------------------------------------------- */
+  .top-utility-bar {
+    background: #0f172a;
+    color: #e2e8f0;
+    font-size: 0.8rem;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .top-utility-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .top-date-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #94a3b8;
+  }
+  .edition-badge {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .top-contact-link {
+    color: #cbd5e1;
+  }
+  .top-contact-link:hover {
+    color: #ffffff;
+  }
+
+  .breaking-news-strip {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border-light);
+    font-size: 0.84rem;
+  }
+  .breaking-news-inner {
+    display: flex;
+    align-items: center;
+  }
+  .breaking-label {
+    background: var(--primary-red);
+    color: #ffffff;
+    font-weight: 700;
+    padding: 7px 14px;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.75px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .breaking-label::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #ffffff;
+    border-radius: 50%;
+  }
+  .breaking-ticker-text {
+    padding: 0 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--text-dark);
+    font-weight: 500;
+  }
+
+  /* --------------------------------------------------------------------------
+     HEADER & BRANDING
+     -------------------------------------------------------------------------- */
+  .site-header {
+    background: #ffffff;
+    border-bottom: 2px solid var(--border-dark);
+    padding: 18px 0;
+  }
+  .header-main-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .brand-lockup {
+    flex: 0 0 auto;
+  }
+  .site-title {
+    font-family: 'Playfair Display', var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #0b0f19;
+    line-height: 1;
+    margin: 0;
+  }
+  .site-title a {
+    color: #0b0f19;
+  }
+  .site-title .brand-accent {
+    color: var(--primary-red);
+  }
+  .site-tagline {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 4px;
+    font-weight: 500;
+  }
+
+  /* Header Ad Slot 728x90 */
+  .header-ad-wrapper {
+    flex: 1 1 728px;
+    max-width: 728px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .ad-slot-box {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .ad-slot-header {
+    width: 728px;
+    height: 90px;
+    max-width: 100%;
+  }
+  .ad-caption-label {
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+    pointer-events: none;
+  }
+
+  @media (max-width: 900px) {
+    .header-main-row {
+      flex-direction: column;
+      text-align: center;
+    }
+    .header-ad-wrapper {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  /* --------------------------------------------------------------------------
+     NAVIGATION BAR
+     -------------------------------------------------------------------------- */
+  .primary-nav-bar {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  }
+  .nav-inner-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-menu-list {
+    display: flex;
+    list-style: none;
+    gap: 4px;
+    overflow-x: auto;
+    padding: 0;
+    margin: 0;
+    scrollbar-width: none;
+  }
+  .nav-menu-list::-webkit-scrollbar {
+    display: none;
+  }
+  .nav-menu-list li a {
+    display: block;
+    padding: 12px 14px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #1e293b;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    position: relative;
+    white-space: nowrap;
+  }
+  .nav-menu-list li a:hover,
+  .nav-menu-list li.active a {
+    color: var(--primary-red);
+  }
+  .nav-menu-list li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 14px;
+    right: 14px;
+    height: 3px;
+    background: var(--primary-red);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+  .nav-menu-list li a:hover::after,
+  .nav-menu-list li.active a::after {
+    opacity: 1;
+  }
+
+  .nav-search-bar {
+    display: flex;
+    align-items: center;
+  }
+  .search-form {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .search-input {
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 0.82rem;
+    outline: none;
+    transition: border-color 0.2s, width 0.2s;
+    width: 170px;
+    background: #f8fafc;
+  }
+  .search-input:focus {
+    border-color: var(--primary-red);
+    background: #ffffff;
+    width: 210px;
+  }
+
+  /* --------------------------------------------------------------------------
+     2. MODERN NEWSPAPER TYPOGRAPHY & POST LAYOUT
+     -------------------------------------------------------------------------- */
+  .article-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid #edf0f3;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 24px;
+  }
+  .article-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.07);
+  }
+
+  .post-title {
+    font-family: var(--font-heading);
+    color: var(--text-dark);
+    font-weight: 700;
+    line-height: 1.28;
+    margin-bottom: 10px;
+  }
+  .post-title a {
+    color: var(--text-dark);
+  }
+  .post-title a:hover {
+    color: var(--primary-red);
+  }
+
+  /* Category Kicker */
+  .category-kicker {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--primary-red);
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+
+  /* Post Metadata Line */
+  .post-meta-strip {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+  .meta-author {
+    font-weight: 600;
+    color: #1e293b;
+  }
+  .meta-dot {
+    font-size: 0.75rem;
+    color: #94a3b8;
+  }
+  .meta-date {
+    color: #64748b;
+  }
+  .meta-readtime {
+    color: #64748b;
+  }
+
+  /* Featured Hero Section */
+  .featured-hero-box {
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #edf0f3;
+    overflow: hidden;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+  .featured-hero-img-wrap {
+    position: relative;
+    width: 100%;
+    max-height: 420px;
+    overflow: hidden;
+    background: #0f172a;
+  }
+  .featured-hero-img-wrap img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .featured-hero-box:hover .featured-hero-img-wrap img {
+    transform: scale(1.02);
+  }
+  .featured-hero-content {
+    padding: 24px;
+  }
+  .featured-hero-title {
+    font-size: 1.85rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 8px 0 12px 0;
+  }
+  .featured-hero-snippet {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+
+  /* Homepage 2-Column Subgrid */
+  .posts-subgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  @media (max-width: 640px) {
+    .posts-subgrid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .grid-card-thumb {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: #e2e8f0;
+  }
+  .grid-card-content {
+    padding: 16px 18px;
+  }
+  .grid-card-title {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+  }
+  .grid-card-snippet {
+    font-size: 0.86rem;
+    color: #555555;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* --------------------------------------------------------------------------
+     SINGLE POST STYLING & ARTICLE READING EXPERIENCE
+     -------------------------------------------------------------------------- */
+  .single-post-container {
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #edf0f3;
+    padding: 32px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  @media (max-width: 640px) {
+    .single-post-container {
+      padding: 18px;
+    }
+  }
+
+  .single-post-header {
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+  }
+  .single-post-title {
+    font-size: 2.25rem;
+    line-height: 1.24;
+    font-weight: 800;
+    color: #0b0f19;
+    margin: 10px 0 14px 0;
+  }
+  @media (max-width: 640px) {
+    .single-post-title {
+      font-size: 1.65rem;
+    }
+  }
+
+  /* Author Byline Bar with Avatar */
+  .author-byline-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding-top: 10px;
+  }
+  .byline-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .author-avatar-small {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e2e8f0;
+  }
+  .author-meta-text {
+    line-height: 1.3;
+  }
+  .author-name-bold {
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 0.95rem;
+  }
+  .author-title-sub {
+    font-size: 0.76rem;
+    color: #64748b;
+  }
+
+  /* Social Share Buttons */
+  .share-buttons-strip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+  }
+  .share-btn:hover {
+    opacity: 0.9;
+    color: #ffffff;
+  }
+  .share-wa { background: #25d366; }
+  .share-tw { background: #000000; }
+  .share-fb { background: #1877f2; }
+  .share-tg { background: #229ed9; }
+
+  /* In-Article Ad Slots */
+  .in-article-ad-box {
+    margin: 24px 0;
+    padding: 14px;
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 6px;
+    text-align: center;
+    position: relative;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ARTICLE BODY TYPOGRAPHY */
+  .article-body-content {
+    font-size: 1.08rem;
+    line-height: 1.78;
+    color: var(--text-body);
+  }
+  .article-body-content p {
+    margin-bottom: 20px;
+  }
+  .article-body-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 22px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+
+  /* Article Headings H2, H3 with Left Border Highlight */
+  .article-body-content h2,
+  .article-body-content h3 {
+    font-family: var(--font-heading);
+    color: var(--text-dark);
+    font-weight: 700;
+    border-left: 4px solid var(--primary-red);
+    padding-left: 14px;
+    margin: 32px 0 16px 0;
+    line-height: 1.32;
+  }
+  .article-body-content h2 {
+    font-size: 1.55rem;
+  }
+  .article-body-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .article-body-content blockquote {
+    border-left: 3px solid #0f172a;
+    padding: 12px 20px;
+    margin: 24px 0;
+    background: #f8fafc;
+    font-style: italic;
+    font-family: var(--font-heading);
+    color: #1e293b;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .article-body-content ul,
+  .article-body-content ol {
+    margin: 18px 0 22px 24px;
+  }
+  .article-body-content li {
+    margin-bottom: 8px;
+  }
+
+  /* Post Tags / Labels */
+  .post-tags-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 18px 0;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+    margin: 28px 0;
+  }
+  .tag-label-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #475569;
+  }
+  .post-tag-item {
+    background: #f1f5f9;
+    color: #334155;
+    font-size: 0.78rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  .post-tag-item:hover {
+    background: var(--primary-red);
+    color: #ffffff;
+  }
+
+  /* Author Box for Ajay Kumar */
+  .author-profile-box {
+    display: flex;
+    gap: 20px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 30px 0;
+    align-items: center;
+  }
+  @media (max-width: 600px) {
+    .author-profile-box {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  .author-bio-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    flex-shrink: 0;
+  }
+  .author-bio-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 4px;
+  }
+  .author-bio-role {
+    font-size: 0.78rem;
+    color: var(--primary-red);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+  .author-bio-desc {
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  .author-contact-link {
+    font-size: 0.82rem;
+    color: #1e293b;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .author-contact-link:hover {
+    color: var(--primary-red);
+  }
+
+  /* Related Posts Grid */
+  .related-posts-section {
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 2px solid var(--border-dark);
+  }
+  .section-headline {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+    color: #0b0f19;
+    position: relative;
+    display: inline-block;
+  }
+  .section-headline::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--primary-red);
+  }
+
+  /* --------------------------------------------------------------------------
+     4. SIDEBAR & ADSENSE ADS SLOTS
+     -------------------------------------------------------------------------- */
+  .sidebar-widget {
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #edf0f3;
+    padding: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  }
+  .widget-heading {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    border-bottom: 2px solid #0f172a;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .widget-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 32px;
+    height: 2px;
+    background: var(--primary-red);
+  }
+
+  /* Sticky 300x250 Ad Container */
+  .sidebar-sticky-ad {
+    position: sticky;
+    top: 60px;
+  }
+  .ad-slot-sidebar {
+    width: 300px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  /* Trending Posts Numbered List */
+  .trending-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .trending-item {
+    display: flex;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .trending-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .trending-item:first-child {
+    padding-top: 0;
+  }
+  .trending-num {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #cbd5e1;
+    line-height: 1;
+    min-width: 28px;
+  }
+  .trending-item:hover .trending-num {
+    color: var(--primary-red);
+  }
+  .trending-title {
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #1e293b;
+    margin-bottom: 4px;
+  }
+  .trending-date {
+    font-size: 0.74rem;
+    color: #64748b;
+  }
+
+  /* Sidebar Category Cloud */
+  .category-list-sidebar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .cat-item-sidebar {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: #334155;
+  }
+  .cat-item-sidebar:hover {
+    color: var(--primary-red);
+  }
+  .cat-count {
+    background: #f1f5f9;
+    padding: 2px 7px;
+    border-radius: 10px;
+    font-size: 0.72rem;
+    color: #64748b;
+  }
+
+  /* Newsletter Box */
+  .newsletter-card {
+    background: #0f172a;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .newsletter-card .widget-heading {
+    color: #ffffff;
+    border-bottom-color: rgba(255,255,255,0.2);
+  }
+  .newsletter-desc {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+  .newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #334155;
+    background: #1e293b;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 0.84rem;
+    outline: none;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  .newsletter-btn {
+    width: 100%;
+    background: var(--primary-red);
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 0.84rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .newsletter-btn:hover {
+    background: var(--primary-red-hover);
+  }
+
+  /* --------------------------------------------------------------------------
+     BLOGGER PAGINATION & FEED CONTROLS
+     -------------------------------------------------------------------------- */
+  .blog-pager {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 1px solid var(--border-light);
+  }
+  .blog-pager a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: #1e293b;
+  }
+  .blog-pager a:hover {
+    background: var(--primary-red);
+    color: #ffffff;
+    border-color: var(--primary-red);
+  }
+
+  /* --------------------------------------------------------------------------
+     FOOTER
+     -------------------------------------------------------------------------- */
+  .site-footer {
+    background: #090d16;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    padding-top: 48px;
+    border-top: 4px solid var(--primary-red);
+  }
+  .footer-columns-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  @media (max-width: 900px) {
+    .footer-columns-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 600px) {
+    .footer-columns-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .footer-col-title {
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .footer-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-nav-list li {
+    margin-bottom: 8px;
+  }
+  .footer-nav-list li a {
+    color: #94a3b8;
+  }
+  .footer-nav-list li a:hover {
+    color: #ffffff;
+  }
+  .footer-bottom-bar {
+    padding: 20px 0;
+    font-size: 0.78rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-bottom-links {
+    display: flex;
+    gap: 16px;
+  }
+
+  /* Responsive fixes */
+  @media (max-width: 768px) {
+    .site-title { font-size: 2rem; }
+    .ad-slot-header { display: none; }
+  }
+  ]]></b:skin>
+</head>
+<body>
+
+  <!-- Top Utility Ribbon -->
+  <div class='top-utility-bar'>
+    <div class='site-container top-utility-inner'>
+      <div class='top-date-meta'>
+        <span class='edition-badge'>India Edition</span>
+        <span id='live-date-str'>Today&#39;s Edition</span>
+        <span>•</span>
+        <span>Story Real A Journalism</span>
+      </div>
+      <div>
+        <a class='top-contact-link' href='mailto:mmcrajay@gmail.com'>Editor: Ajay Kumar (mmcrajay@gmail.com)</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Breaking News Ticker Strip -->
+  <div class='breaking-news-strip'>
+    <div class='site-container breaking-news-inner'>
+      <div class='breaking-label'>Breaking News</div>
+      <div class='breaking-ticker-text'>
+        Welcome to Story Real A • Verified independent reporting, unbiased investigative analyses, and nationwide updates.
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Site Header -->
+  <header class='site-header'>
+    <div class='site-container header-main-row'>
+      <div class='brand-lockup'>
+        <h1 class='site-title'>
+          <a expr:href='data:blog.homepageUrl'>STORY REAL <span class='brand-accent'>A</span></a>
+        </h1>
+        <div class='site-tagline'>Independent Journalism • Insightful Stories • Verified Truth</div>
+      </div>
+
+      <!-- Header AdSense Slot 728x90 -->
+      <div class='header-ad-wrapper'>
+        <b:section id='header-ad' maxwidgets='1' showaddelement='yes'>
+          <b:widget id='HTML1' locked='false' title='Header Ad 728x90' type='HTML'>
+            <b:includable id='main'>
+              <div class='ad-slot-box ad-slot-header'>
+                <span class='ad-caption-label'>Advertisement</span>
+                <!-- Google AdSense 728x90 Banner -->
+                <ins class='adsbygoogle'
+                     data-ad-client='ca-pub-2790193514099157'
+                     data-ad-format='horizontal'
+                     data-full-width-responsive='true'
+                     data-ad-slot='default'
+                     style='display:inline-block;width:728px;height:90px'></ins>
+                <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+              </div>
+            </b:includable>
+          </b:widget>
+        </b:section>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Navigation Bar -->
+  <nav class='primary-nav-bar'>
+    <div class='site-container nav-inner-flex'>
+      <ul class='nav-menu-list'>
+        <li class='active'><a expr:href='data:blog.homepageUrl'>Home</a></li>
+        <li><a expr:href='data:blog.homepageUrl + "search/label/India"'>India</a></li>
+        <li><a expr:href='data:blog.homepageUrl + "search/label/Politics"'>Politics</a></li>
+        <li><a expr:href='data:blog.homepageUrl + "search/label/World"'>World</a></li>
+        <li><a expr:href='data:blog.homepageUrl + "search/label/Business"'>Business</a></li>
+        <li><a expr:href='data:blog.homepageUrl + "search/label/Tech"'>Tech</a></li>
+        <li><a expr:href='data:blog.homepageUrl + "search/label/Culture"'>Culture</a></li>
+        <li><a expr:href='data:blog.homepageUrl + "search/label/Opinion"'>Opinion</a></li>
+        <li><a href='mailto:mmcrajay@gmail.com'>Contact</a></li>
+      </ul>
+
+      <div class='nav-search-bar'>
+        <form action='/search' class='search-form' method='get'>
+          <input class='search-input' name='q' placeholder='Search news...' type='text'/>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Container with 70% / 30% 2-Column Grid -->
+  <div class='site-container'>
+    <div class='main-layout-grid'>
+
+      <!-- ====================================================================
+           LEFT MAIN AREA (70% WIDTH)
+           Mandatory feed section: <b:section id='main' class='main' showaddelement='yes'>
+           ==================================================================== -->
+      <main class='main-column' role='main'>
+        <b:section class='main' id='main' showaddelement='yes'>
+          <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+            <b:includable id='main'>
+
+              <!-- ==============================================
+                   CASE A: SINGLE POST VIEW
+                   ============================================== -->
+              <b:if cond='data:view.isPost'>
+                <b:loop values='data:posts' var='post'>
+                  <article class='single-post-container'>
+                    <div class='single-post-header'>
+                      <!-- Category Label -->
+                      <b:if cond='data:post.labels'>
+                        <b:loop values='data:post.labels' var='label'>
+                          <span class='category-kicker'><data:label.name/></span>
+                        </b:loop>
+                      </b:if>
+
+                      <h1 class='single-post-title'><data:post.title/></h1>
+
+                      <div class='author-byline-bar'>
+                        <div class='byline-left'>
+                          <img alt='Ajay Kumar' class='author-avatar-small' src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80'/>
+                          <div class='author-meta-text'>
+                            <div class='author-name-bold'>Ajay Kumar</div>
+                            <div class='author-title-sub'>Published on <data:post.date/> • 4 min read</div>
+                          </div>
+                        </div>
+
+                        <!-- Social Share Buttons -->
+                        <div class='share-buttons-strip'>
+                          <a class='share-btn share-wa' expr:href='"https://api.whatsapp.com/send?text=" + data:post.title + " " + data:post.url' target='_blank'>WhatsApp</a>
+                          <a class='share-btn share-tw' expr:href='"https://twitter.com/intent/tweet?text=" + data:post.title + "&amp;url=" + data:post.url' target='_blank'>X / Twitter</a>
+                          <a class='share-btn share-fb' expr:href='"https://www.facebook.com/sharer/sharer.php?u=" + data:post.url' target='_blank'>Share</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Top In-Article AdSense Ad -->
+                    <div class='in-article-ad-box'>
+                      <span class='ad-caption-label'>Advertisement</span>
+                      <ins class='adsbygoogle'
+                           data-ad-client='ca-pub-2790193514099157'
+                           data-ad-format='fluid'
+                           data-ad-layout='in-article'
+                           data-ad-slot='default'
+                           style='display:block; text-align:center;'></ins>
+                      <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                      </script>
+                    </div>
+
+                    <!-- Article Body Content -->
+                    <div class='article-body-content' id='post-body'>
+                      <data:post.body/>
+                    </div>
+
+                    <!-- Bottom In-Article AdSense Ad -->
+                    <div class='in-article-ad-box'>
+                      <span class='ad-caption-label'>Advertisement</span>
+                      <ins class='adsbygoogle'
+                           data-ad-client='ca-pub-2790193514099157'
+                           data-ad-format='fluid'
+                           data-ad-layout='in-article'
+                           data-ad-slot='default'
+                           style='display:block; text-align:center;'></ins>
+                      <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                      </script>
+                    </div>
+
+                    <!-- Labels & Tags -->
+                    <b:if cond='data:post.labels'>
+                      <div class='post-tags-wrapper'>
+                        <span class='tag-label-title'>Tags:</span>
+                        <b:loop values='data:post.labels' var='label'>
+                          <a class='post-tag-item' expr:href='data:label.url'><data:label.name/></a>
+                        </b:loop>
+                      </div>
+                    </b:if>
+
+                    <!-- Author Box: Ajay Kumar -->
+                    <div class='author-profile-box'>
+                      <img alt='Ajay Kumar' class='author-bio-avatar' src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=160&amp;h=160&amp;q=80'/>
+                      <div>
+                        <div class='author-bio-title'>Ajay Kumar</div>
+                        <div class='author-bio-role'>Publisher &amp; Editor-in-Chief • Story Real A</div>
+                        <p class='author-bio-desc'>
+                          Independent journalist covering investigative stories, public policy, socioeconomic trends, and national developments across India. Dedicated to factual accuracy and fearless reportage.
+                        </p>
+                        <a class='author-contact-link' href='mailto:mmcrajay@gmail.com'>
+                          Contact Ajay: mmcrajay@gmail.com
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Comments Section -->
+                    <div class='comments-wrap' id='comments'>
+                      <h3 class='section-headline'>Comments &amp; Discussion</h3>
+                      <b:include data='post' name='comments'/>
+                    </div>
+                  </article>
+                </b:loop>
+              </b:if>
+
+              <!-- ==============================================
+                   CASE B: HOMEPAGE / ARCHIVE FEED VIEW
+                   (Renders all 171 published posts seamlessly)
+                   ============================================== -->
+              <b:if cond='!data:view.isPost'>
+                <div class='feed-posts-container'>
+
+                  <!-- Hero Post (Index 0) -->
+                  <b:loop index='idx' values='data:posts' var='post'>
+                    <b:if cond='data:idx == 0'>
+                      <article class='featured-hero-box'>
+                        <div class='featured-hero-img-wrap'>
+                          <b:if cond='data:post.featuredImage'>
+                            <a expr:href='data:post.url'>
+                              <img alt='Featured Story' expr:src='data:post.featuredImage'/>
+                            </a>
+                          <b:else/>
+                            <a expr:href='data:post.url'>
+                              <img alt='Featured Story' src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=1200&amp;q=80'/>
+                            </a>
+                          </b:if>
+                        </div>
+                        <div class='featured-hero-content'>
+                          <b:if cond='data:post.labels'>
+                            <b:loop values='data:post.labels' var='label'>
+                              <span class='category-kicker'><data:label.name/></span>
+                            </b:loop>
+                          <b:else/>
+                            <span class='category-kicker'>Featured Story</span>
+                          </b:if>
+
+                          <h2 class='post-title featured-hero-title'>
+                            <a expr:href='data:post.url'><data:post.title/></a>
+                          </h2>
+
+                          <div class='post-meta-strip'>
+                            <span class='meta-author'>By Ajay Kumar</span>
+                            <span class='meta-dot'>•</span>
+                            <span class='meta-date'><data:post.date/></span>
+                            <span class='meta-dot'>•</span>
+                            <span class='meta-readtime'>5 min read</span>
+                          </div>
+
+                          <p class='featured-hero-snippet'>
+                            <data:post.snippet/>
+                          </p>
+                        </div>
+                      </article>
+                    </b:if>
+                  </b:loop>
+
+                  <!-- 2-Column Subgrid for Remaining Posts (Indices 1+) -->
+                  <div class='posts-subgrid'>
+                    <b:loop index='idx' values='data:posts' var='post'>
+                      <b:if cond='data:idx &gt; 0'>
+                        <article class='article-card'>
+                          <b:if cond='data:post.featuredImage'>
+                            <a expr:href='data:post.url'>
+                              <img alt='Article Thumbnail' class='grid-card-thumb' expr:src='data:post.featuredImage'/>
+                            </a>
+                          <b:else/>
+                            <a expr:href='data:post.url'>
+                              <img alt='Article Thumbnail' class='grid-card-thumb' src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&amp;fit=crop&amp;w=600&amp;q=80'/>
+                            </a>
+                          </b:if>
+
+                          <div class='grid-card-content'>
+                            <b:if cond='data:post.labels'>
+                              <b:loop values='data:post.labels' var='label'>
+                                <span class='category-kicker'><data:label.name/></span>
+                              </b:loop>
+                            </b:if>
+
+                            <h3 class='post-title grid-card-title'>
+                              <a expr:href='data:post.url'><data:post.title/></a>
+                            </h3>
+
+                            <div class='post-meta-strip'>
+                              <span class='meta-author'>Ajay Kumar</span>
+                              <span class='meta-dot'>•</span>
+                              <span class='meta-date'><data:post.date/></span>
+                            </div>
+
+                            <p class='grid-card-snippet'>
+                              <data:post.snippet/>
+                            </p>
+                          </div>
+                        </article>
+                      </b:if>
+                    </b:loop>
+                  </div>
+
+                  <!-- Pagination Controls -->
+                  <div class='blog-pager'>
+                    <b:if cond='data:newerPageUrl'>
+                      <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' id='blog-pager-newer-link'>
+                        ← Newer Stories
+                      </a>
+                    <b:else/>
+                      <span></span>
+                    </b:if>
+
+                    <b:if cond='data:olderPageUrl'>
+                      <a class='blog-pager-older-link' expr:href='data:olderPageUrl' id='blog-pager-older-link'>
+                        Older Stories →
+                      </a>
+                    </b:if>
+                  </div>
+
+                </div>
+              </b:if>
+
+            </b:includable>
+          </b:widget>
+        </b:section>
+      </main>
+
+      <!-- ====================================================================
+           RIGHT SIDEBAR (30% WIDTH)
+           ==================================================================== -->
+      <aside class='sidebar-column' role='complementary'>
+        <b:section class='sidebar' id='sidebar' showaddelement='yes'>
+
+          <!-- Widget 1: Sticky AdSense Box 300x250 -->
+          <b:widget id='HTML2' locked='false' title='Sticky Sidebar Ad' type='HTML'>
+            <b:includable id='main'>
+              <div class='sidebar-widget sidebar-sticky-ad'>
+                <div class='widget-heading'>Sponsored</div>
+                <div class='ad-slot-box ad-slot-sidebar'>
+                  <span class='ad-caption-label'>Advertisement</span>
+                  <!-- AdSense 300x250 Rectangle -->
+                  <ins class='adsbygoogle'
+                       data-ad-client='ca-pub-2790193514099157'
+                       data-ad-format='rectangle'
+                       data-ad-slot='default'
+                       style='display:inline-block;width:300px;height:250px'></ins>
+                  <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                  </script>
+                </div>
+              </div>
+            </b:includable>
+          </b:widget>
+
+          <!-- Widget 2: Publisher Profile (Ajay Kumar) -->
+          <b:widget id='HTML3' locked='false' title='About Editor' type='HTML'>
+            <b:includable id='main'>
+              <div class='sidebar-widget'>
+                <div class='widget-heading'>About Publisher</div>
+                <div style='display:flex; align-items:center; gap:12px; margin-bottom:12px;'>
+                  <img alt='Ajay Kumar' src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80' style='width:56px; height:56px; border-radius:50%; object-fit:cover;'/>
+                  <div>
+                    <h4 style='font-size:1rem; font-weight:700; color:#0f172a; margin:0;'>Ajay Kumar</h4>
+                    <span style='font-size:0.75rem; color:#c91414; font-weight:600; text-transform:uppercase;'>Chief Editor</span>
+                  </div>
+                </div>
+                <p style='font-size:0.85rem; color:#475569; line-height:1.6; margin-bottom:12px;'>
+                  Founder and lead editor of <strong>Story Real A</strong>. Committed to bringing grassroots reporting, verified investigative news, and unbiased policy analyses.
+                </p>
+                <div style='font-size:0.82rem; color:#1e293b; background:#f8fafc; padding:8px 12px; border-radius:6px; border:1px solid #e2e8f0;'>
+                  <strong>Contact:</strong> <a href='mailto:mmcrajay@gmail.com' style='color:#c91414;'>mmcrajay@gmail.com</a>
+                </div>
+              </div>
+            </b:includable>
+          </b:widget>
+
+          <!-- Widget 3: Trending Top Stories -->
+          <b:widget id='HTML4' locked='false' title='Trending Stories' type='HTML'>
+            <b:includable id='main'>
+              <div class='sidebar-widget'>
+                <div class='widget-heading'>Trending Stories</div>
+                <ul class='trending-list'>
+                  <li class='trending-item'>
+                    <div class='trending-num'>01</div>
+                    <div>
+                      <h4 class='trending-title'>
+                        <a href='#'>National Economic Outlook: Fiscal Targets and Rural Market Growth</a>
+                      </h4>
+                      <div class='trending-date'>October 2026 • Policy</div>
+                    </div>
+                  </li>
+                  <li class='trending-item'>
+                    <div class='trending-num'>02</div>
+                    <div>
+                      <h4 class='trending-title'>
+                        <a href='#'>Infrastructure Milestones: High-Speed Corridor Progress Across States</a>
+                      </h4>
+                      <div class='trending-date'>October 2026 • Development</div>
+                    </div>
+                  </li>
+                  <li class='trending-item'>
+                    <div class='trending-num'>03</div>
+                    <div>
+                      <h4 class='trending-title'>
+                        <a href='#'>Clean Energy Transition: Solar Grid Expansions Exceed Quarterly Targets</a>
+                      </h4>
+                      <div class='trending-date'>October 2026 • Tech &amp; Environment</div>
+                    </div>
+                  </li>
+                  <li class='trending-item'>
+                    <div class='trending-num'>04</div>
+                    <div>
+                      <h4 class='trending-title'>
+                        <a href='#'>Healthcare Access in Tier-2 Cities: New Digital Hubs Launched</a>
+                      </h4>
+                      <div class='trending-date'>October 2026 • Health</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </b:includable>
+          </b:widget>
+
+          <!-- Widget 4: Newsletter Subscription -->
+          <b:widget id='HTML5' locked='false' title='Newsletter' type='HTML'>
+            <b:includable id='main'>
+              <div class='sidebar-widget newsletter-card'>
+                <div class='widget-heading'>Daily Briefing</div>
+                <p class='newsletter-desc'>Get the top stories and verified investigative updates delivered to your inbox every morning.</p>
+                <form class='newsletter-form' onsubmit='event.preventDefault(); alert("Thank you for subscribing to Story Real A!");'>
+                  <input placeholder='Enter your email...' required='required' type='email'/>
+                  <button class='newsletter-btn' type='submit'>Subscribe Free</button>
+                </form>
+              </div>
+            </b:includable>
+          </b:widget>
+
+        </b:section>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- Main Site Footer -->
+  <footer class='site-footer'>
+    <div class='site-container'>
+      <div class='footer-columns-grid'>
+        <!-- Column 1: About Story Real A -->
+        <div>
+          <div class='footer-col-title'>STORY REAL A</div>
+          <p style='font-size:0.86rem; line-height:1.7; color:#94a3b8; margin-bottom:14px;'>
+            Story Real A (storyreala.blogspot.com) is an independent digital news platform publishing balanced reportage, verified news analysis, and grassroots investigative journalism.
+          </p>
+          <div style='font-size:0.82rem; color:#cbd5e1;'>
+            <strong>Editor:</strong> Ajay Kumar • <strong>Contact:</strong> mmcrajay@gmail.com
+          </div>
+        </div>
+
+        <!-- Column 2: News Sections -->
+        <div>
+          <div class='footer-col-title'>Sections</div>
+          <ul class='footer-nav-list'>
+            <li><a expr:href='data:blog.homepageUrl + "search/label/India"'>India News</a></li>
+            <li><a expr:href='data:blog.homepageUrl + "search/label/Politics"'>Politics</a></li>
+            <li><a expr:href='data:blog.homepageUrl + "search/label/Business"'>Business &amp; Economy</a></li>
+            <li><a expr:href='data:blog.homepageUrl + "search/label/Tech"'>Technology</a></li>
+            <li><a expr:href='data:blog.homepageUrl + "search/label/Opinion"'>Editorials</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Trust & Governance -->
+        <div>
+          <div class='footer-col-title'>Ethics &amp; Trust</div>
+          <ul class='footer-nav-list'>
+            <li><a href='#'>Editorial Policy</a></li>
+            <li><a href='#'>Fact-Check Policy</a></li>
+            <li><a href='#'>Corrections Policy</a></li>
+            <li><a href='#'>Privacy Policy</a></li>
+            <li><a href='#'>Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Feed -->
+        <div>
+          <div class='footer-col-title'>Editorial Office</div>
+          <p style='font-size:0.84rem; line-height:1.6; margin-bottom:10px;'>
+            Questions, story tips, or press releases? Contact our editorial desk directly.
+          </p>
+          <div style='margin-bottom:8px;'>
+            <span style='color:#ffffff; font-weight:600;'>Email:</span> <a href='mailto:mmcrajay@gmail.com' style='color:#c91414;'>mmcrajay@gmail.com</a>
+          </div>
+          <div>
+            <span style='color:#ffffff; font-weight:600;'>Platform:</span> storyreala.blogspot.com
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Copyright -->
+      <div class='footer-bottom-bar'>
+        <div>
+          © 2026 Story Real A. All Rights Reserved. Published by Ajay Kumar.
+        </div>
+        <div class='footer-bottom-links'>
+          <a href='#'>Sitemap</a>
+          <a href='#'>RSS Feed</a>
+          <a href='mailto:mmcrajay@gmail.com'>Advertise With Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script to populate current date dynamically in top bar -->
+  <script type='text/javascript'>
+    //<![CDATA[
+    (function() {
+      var dateElem = document.getElementById('live-date-str');
+      if (dateElem) {
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        var today = new Date();
+        dateElem.textContent = today.toLocaleDateString('en-US', options);
+      }
+    })();
+    //]]>
+  </script>
+
+</body>
+</html>
